@@ -50,10 +50,9 @@ footer p{
 }
 
 .question-page{
-    /* display: none; */
+    display: none;
     width: 1000px;
     height: 90vh;
-    /* background-color: thistle; */
 }
 
 .mini-quiz-time-image{
@@ -203,10 +202,20 @@ footer p{
     top: 42px;
 }
 
+.left-score p{
+    position: absolute;
+    left: -10px;
+}
+
 .right-score{
     position: absolute;
     right: -40px;
     top: 42px;
+}
+
+.right-score p{
+    position: absolute;
+    right: -20px;
 }
 
 .left-score img,.right-score img{
