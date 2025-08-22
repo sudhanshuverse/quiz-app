@@ -75,11 +75,10 @@ export const quiz = [
 ```
 
 ## Technologies Used
-HTML5
 
-CSS3
-
-JavaScript (ES6 modules)
+- HTML5
+- CSS3
+- JavaScript (ES6 modules)
 
 ## License
 This project is open source and available under the MIT License.
