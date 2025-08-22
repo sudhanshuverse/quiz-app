@@ -107,7 +107,7 @@ footer p{
 
 .timer p {
     padding: 8px 15px;
-    background: #1bdf2b;
+    background-color: #1bdf2b;
     font-weight: 700;
     color: white;
     font-size: 1.1rem;
@@ -137,18 +137,18 @@ footer p{
     cursor: pointer;
 }
 
-.next{
+.submit-button{
     text-align: end;
 }
 
-.next button{
-    padding: 10px 20px;
-    font-size: 1.3rem;
+.next{
+    margin-top: 20px;
+    font-size: 1.6rem;
     border: none;
     background-color: transparent;
     cursor: pointer;
     font-weight: 700;
-    color: rgb(13, 221, 13);
+    color: rgb(43, 226, 43);
 }
 
 
