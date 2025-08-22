@@ -4,12 +4,12 @@
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
-    font-family: "Poppins", sans-serif;
     background-color: #F6F4F0;
 }
 
+/* ---------- MAIN PAGE ---------- */
 main {
     display: flex;
     align-items: center;
@@ -24,17 +24,16 @@ main {
     gap: 50px;
 }
 
-.image-container{
+.image-container {
     width: 100%;
 }
 
-.image-container img{
+.image-container img {
     max-width: 800px;
     width: 100%;
 }
 
-
-.start-now{
+.start-now {
     background-color: #1bdf2b;
     color: white;
     border: none;
@@ -43,27 +42,33 @@ main {
     border-radius: 10px;
     cursor: pointer;
     font-family: inherit;
+    transition: background-color 0.3s ease;
 }
 
-footer p{
+.start-now:hover {
+    background-color: #16b923;
+}
+
+footer p {
     text-align: center;
 }
 
-.question-page{
+/* ---------- QUESTION PAGE ---------- */
+.question-page {
     display: none;
     width: 1000px;
     height: 90vh;
 }
 
-.mini-quiz-time-image{
+.mini-quiz-time-image {
     max-width: 200px;
 }
 
-.mini-quiz-time-image img{
+.mini-quiz-time-image img {
     width: 100%;
 }
 
-.questions-and-sound{
+.questions-and-sound {
     width: 100%;
     display: flex;
     align-items: center;
@@ -71,22 +76,24 @@ footer p{
     gap: 20px;
 }
 
-.questions-and-sound .sound{
+.questions-and-sound .sound {
     max-width: 25px;
 }
 
-.questions-and-sound .sound img{
+.questions-and-sound .sound img {
     width: 100%;
+    cursor: pointer;
 }
 
-.questions-and-sound p{
+.questions-and-sound p {
     background-color: #FEC33D;
     padding: 7px 20px;
     font-weight: 700;
     font-size: 1.5rem;
+    margin: 0;
 }
 
-.question{
+.question {
     width: 100%;
     background-color: #f5f5f5;
     padding: 20px;
@@ -95,7 +102,7 @@ footer p{
     border-radius: 5px;
 }
 
-.question p{
+.question p {
     margin: 0;
 }
 
@@ -114,7 +121,8 @@ footer p{
     border-radius: 3px;
 }
 
-.options-container{
+/* ---------- OPTIONS ---------- */
+.options-container {
     width: 100%;
     height: 480px;
     background-color: #f5f5f5;
@@ -127,7 +135,7 @@ footer p{
     border-radius: 10px;
 }
 
-.first-options{
+.options {
     width: 100%;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -135,13 +143,33 @@ footer p{
     font-weight: 600;
     font-size: 1.1rem;
     cursor: pointer;
+    transition: border 0.3s ease, background-color 0.3s ease;
 }
 
-.submit-button{
+/* Disable state */
+.options.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Correct / Wrong answers */
+.options.correct {
+    border: 2px solid green;
+    background-color: #e6ffe6;
+}
+
+.options.wrong {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+/* ---------- NEXT BUTTON ---------- */
+.submit-button {
     text-align: end;
 }
 
-.next{
+.next {
     margin-top: 20px;
     font-size: 1.6rem;
     border: none;
@@ -149,80 +177,96 @@ footer p{
     cursor: pointer;
     font-weight: 700;
     color: rgb(43, 226, 43);
+    transition: color 0.3s ease;
 }
 
+.next:hover {
+    color: #16b923;
+}
 
-.score{
+/* ---------- SCORE PAGE ---------- */
+.score {
     height: 87vh;
     max-width: 900px;
-    /* display: flex; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
 }
 
-.image-and-result{
+.image-and-result {
     display: flex;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
-.image-and-result img{
+.image-and-result img {
     max-width: 220px;
     width: 100%;
 }
 
-
-.image-and-result h2{
+.image-and-result h2 {
     margin: 0;
     font-size: 1.7rem;
     font-weight: 600;
 }
 
-.score-ratio{
+/* Score bar */
+.score-ratio {
+    width: 100%;
     max-width: 650px;
     height: 100px;
     background-color: #FF7A7A;
     border-radius: 10px;
     position: relative;
     margin: 80px auto;
+    /* overflow: hidden; */
 }
 
-.score-ratio p{
+.score-ratio p {
     text-align: center;
 }
 
-.completed{
+.completed {
     height: 100%;
-    width: 70%;
+    /* width: 20%; */
+    /* dynamically updated by JS */
     background-color: #35BD3A;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s ease;
 }
 
-.left-score{
+.left-score {
     position: absolute;
     left: -40px;
     top: 42px;
 }
 
-.left-score p{
+.left-score p {
     position: absolute;
     left: -10px;
 }
 
-.right-score{
+.right-score {
     position: absolute;
     right: -40px;
     top: 42px;
 }
 
-.right-score p{
+.right-score p {
     position: absolute;
     right: -20px;
 }
 
-.left-score img,.right-score img{
+.left-score img,
+.right-score img {
     width: 100%;
 }
 
-.quote-and-retry{
+/* Quote + Retry */
+.quote-and-retry {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -230,13 +274,12 @@ footer p{
     margin-top: 140px;
 }
 
-.quote-and-retry h2{
+.quote-and-retry h2 {
     font-size: 30px;
     font-weight: 600;
 }
 
-.quote-and-retry button{
-    border: none;
+.quote-and-retry a {
     background-color: #1bdf2b;
     padding: 15px 25px;
     font-size: 1.5rem;
@@ -244,10 +287,16 @@ footer p{
     font-family: inherit;
     border-radius: 10px;
     font-weight: 500;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
-.share-score{
+.quote-and-retry a:hover {
+    background-color: #16b923;
+}
+
+/* Share score */
+.share-score {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,18 +304,23 @@ footer p{
     margin-top: 50px;
 }
 
-.share-score p{
+.share-score p {
     color: #535353;
     font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-.social{
+.social {
     display: flex;
     gap: 15px;
 }
 
-.social img{
+.social img {
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social img:hover {
+    transform: scale(1.1);
 }
