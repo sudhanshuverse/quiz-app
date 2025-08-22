@@ -7,7 +7,7 @@ A simple and interactive quiz application built using **HTML, CSS, and JavaScrip
 ## Live Preview
 
 Check out the live demo of the quiz app:  
-[Live Demo](https://your-live-demo-link.com)  
+[https://sudhanshuverse.github.io/quiz-app/](https://sudhanshuverse.github.io/quiz-app/)  
 
 ---
 
