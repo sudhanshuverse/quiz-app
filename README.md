@@ -85,5 +85,3 @@ This project is open source and available under the MIT License.
 
 ## Author
 Sudhanshu Kumar
-
-Student | BCA | Web Development Enthusiast
