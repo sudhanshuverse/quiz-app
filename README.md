@@ -27,7 +27,7 @@ Check out the live demo of the quiz app:
 
 ## Features
 
-- Display multiple-choice questions from a JSON/JS file.
+- Display multiple-choice questions from a JS file.
 - Countdown timer with visual alerts:
   - Background and timer color change at 15 and 5 seconds remaining.
   - Automatic move to next question when time is up.
